@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      document.addEventListener('click', musicPlay);
+      function musicPlay() {
+          document.getElementById('playAudio').play();
+          document.removeEventListener('click', musicPlay);
+      }
+      window.onload = function() {
+        setTimeout(() => document.getElementById('playAudio').play(), 1000)
+      }
+    </script>
   </head>
   <body>
-    <audio autoplay loop id="playAudio"><source src="background-song.mp3" type="audio/mp3" /></audio>
-    <label class="welcome-text">با حضور گرمتان در جشن پاگشایی نوا، ما را خوشحال کنید</label>
-    
-    <img src="nava.jpg" class="center-image"/>
+    <audio autoplay id="playAudio">
+      <source src="background-song.mp3" type="audio/mp3" />
+    </audio>
+    <label class="welcome-text"
+      >با حضور گرمتان در جشن پاگشایی نوا، ما را خوشحال کنید</label
+    >
 
-    <label class="address-text">آدرس: زعفرانیه - میدان دانش - به طرف کوی فرهنگیان - تالار آسمان 
-    <br> تاریخ : 1402/02/06
-    <br> زمان : 19 - 16</label>
+    <img src="nava.jpg" class="center-image" />
 
-    <a href="https://goo.gl/maps/QZBczenX3iJC6TdWA" target=”_blank” style="
+    <label class="address-text"
+      >آدرس: زعفرانیه - میدان دانش - به طرف کوی فرهنگیان - تالار آسمان <br />
+      تاریخ : 1402/02/06 <br />
+      زمان : 19 - 16</label
+    >
+
+    <a
+      href="https://goo.gl/maps/QZBczenX3iJC6TdWA"
+      target="”_blank”"
+      style="
     width: 100%;
     text-align: center;
-">آدرس تالار</a>
-    
+"
+      >آدرس تالار</a
+    >
+
     <script src="script.js"></script>
   </body>
 </html>
